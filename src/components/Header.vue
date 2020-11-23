@@ -2,12 +2,12 @@
 	<header>
 		<div class="container">
 			<b-row>
-				<transition name="flip-x">
+				<transition name="flip-x" mode="out-in">
 					<b-col class="position-relative" cols="12" v-if="showInput" key="input">
 						<font-awesome-icon icon="search" class="search" />
 						<input type="text" class="py-3 px-5" v-model="searchValue" placeholder="Search for photo" @keyup="getSearch" />
 					</b-col>
-					<b-col cols="12 text-left" v-else class="d-flex align-items-center justify-content-between" key="result">
+					<b-col cols="12 text-left" v-else class="d-flex align-items-center justify-content-between position-relative" key="result">
 						<h2
 							>Search Results for <span>"{{ searchValue }}"</span></h2
 						>
@@ -83,7 +83,7 @@ header {
   
   .flip-x-enter-active,
   .flip-x-leave-active{
-      transition:  transform 0.5s, opacity 0.3s;
+      transition:  transform 0.1s, opacity 0.3s;
   }  
 }
 </style>
