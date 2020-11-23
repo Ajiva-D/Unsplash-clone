@@ -70,7 +70,7 @@ export default {
 		...mapActions(["getRandomPhotos","getSearchPhotos"]),
 	},
 	mounted() {
-		// this.getRandomPhotos();
+		this.getRandomPhotos();
 	},
 	watch:{
 		searchVal(value){
